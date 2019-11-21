@@ -1,4 +1,12 @@
+$theme-colors: (
+        "info": #e03d70,
+        "primary":#7a7271,
+    );
+
 @import "~bootstrap/scss/bootstrap";
 body{
-  background-color: #76b9ca;
+  background-color: #ca91b6;
+}
+h1{
+  font-size: 50px;
 }
