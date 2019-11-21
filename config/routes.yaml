@@ -1,3 +1,10 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+wild_show_index:
+  path: /wild/
+  controller: App\Controller\WildController::index
+
+app_index:
+  path: /
+  controller: App\Controller\DefaultController::index
