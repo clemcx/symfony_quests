@@ -1,20 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello WildController!{% endblock %}
+{% block title %}All programs{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/kezia/Documents/symfony_quests/src/Controller/WildController.php'|file_link(0) }}">src/Controller/WildController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/kezia/Documents/symfony_quests/templates/wild/index.html.twig'|file_link(0) }}">templates/wild/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <h1>Toutes les séries de la table program : </h1>
+    {% for program in programs %}
+        <div>
+            <h2>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
+            <p>{{ program.summary }}</p>
+            <a href="{{ path('wild_show', { 'slug': program.title | lower | replace({" ": "-"})})   }}">
+                voir plus.
+            </a>
+        </div>
+    {% else %}
+        Aucune série trouvée.
+    {% endfor %}
+    <a href="{{ path('app_index') }}">
+        Retour à l'accueil
+    </a>
 {% endblock %}

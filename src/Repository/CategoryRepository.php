@@ -30,7 +30,7 @@ class CategoryRepository extends ServiceEntityRepository
             ->setParameter('val', $value)
             ->orderBy('c.id', 'ASC')
             ->setMaxResults(10)
-            ->getQuery()
+            wild->getQuery()
             ->getResult()
         ;
     }

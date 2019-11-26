@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Quête Symfony-3{% endblock %}
+{% block title %}Quêtes Symfony{% endblock %}
 
 {% block body %}
     <style>
@@ -11,10 +11,13 @@
     <div class="example-wrapper">
         <h1>Bienvenue sur {{ website }}! ✅</h1>
 
-        This friendly message is coming from:
-        <ul>
-            <li>Your controller at <code><a href="{{ '/home/kezia/Documents/quetes_symfony/wild-series/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
-            <li>Your template at <code><a href="{{ '/home/kezia/Documents/quetes_symfony/wild-series/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
-        </ul>
+        {# templates/index.html.twig #}
+        <a href="{{ path('wild_show', { 'slug': "walking-dead" }) }}">
+            Walking Dead
+        </a>
+        <br>
+        <a href="{{ path('wild_index') }}">
+            Toutes les series.
+        </a>
     </div>
 {% endblock %}

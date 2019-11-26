@@ -6,7 +6,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/default/index", name="default")
+     * @Route("/",name="app_index")
      */
     public function index() : Response
     {

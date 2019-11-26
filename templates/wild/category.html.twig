@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for program in programs %}
+    <div>
+        <h2>{{ program.id }} {{ program.title }}</h2>
+        <p> {{ program.summary }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
