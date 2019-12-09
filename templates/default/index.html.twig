@@ -12,12 +12,10 @@
         <h1>Bienvenue sur {{ website }}! ✅</h1>
 
         {# templates/index.html.twig #}
-        <a href="{{ path('wild_show', { 'slug': "walking-dead" }) }}">
+        <a href="{{ path('wild_program', { 'slug': "walking-dead" }) }}">
             Walking Dead
         </a>
         <br>
-        <a href="{{ path('wild_index') }}">
-            Toutes les series.
-        </a>
+
     </div>
 {% endblock %}

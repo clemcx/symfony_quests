@@ -10,7 +10,16 @@
     <header>
     {% block navbar %}{%include 'navbar.html.twig' %}{% endblock %}
     </header>
-        {% block body %}{% endblock %}
+        {% block body %}
+           {% endblock %}
+    {% block back %}
+        <div>
+    <a href="{{ path('wild_index') }}">
+
+            Retour à la liste
+        </a>
+        </div>
+    {% endblock %}
         {% block javascripts %}{{encore_entry_script_tags('app') }}{% endblock %}
     </body>
 </html>

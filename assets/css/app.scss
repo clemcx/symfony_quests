@@ -1,9 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
 $theme-colors: (
         "info": #e03d70,
         "primary":#7a7271,
-    );
+        "clem" : yellow,
+);
 
-@import "~bootstrap/scss/bootstrap";
+
 body{
   background-color: #ca91b6;
 }
