@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h2> Episode n°{{  episode.number}} </h2>
+<h2> {{ program.title }} episode n°{{  episode.number}} </h2>
     <p> titre :{{ episode.title }} </p>
-    <p> titre :{{ program.title }} </p>
-    <p> {{season.description}} {{ season.year }} </p>
+    <p> synopsis :{{ episode.synopsis}} </p>
+    <p>{{season.description}} ({{ season.year }})</p>
 {% endblock %}
 
 {% block title %}

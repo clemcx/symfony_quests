@@ -5,9 +5,8 @@
         <div class="block-main text-center">
                 <h1>Saison{{ season.id }}</h1>
 
-
                 {% for episode in episodes %}
-                        <p> Episode n° {{ episode.number }} :{{ episode.title }}</p>
+                        <a href="{{ path('wild_episode', {'id':episode.id}) }}"> <p> Episode n° {{ episode.number }} :{{ episode.title }}</p></a>
                         <p> {{ episode.synopsis }}</p>
                 {% endfor %}
 
