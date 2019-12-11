@@ -40,12 +40,7 @@ class Program
     private $category;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Season", inversedBy="program_id")
-     */
-    private $season;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Season", mappedBy="program_id")
+     * @ORM\OneToMany(targetEntity="App\Entity\Season", mappedBy="program")
      */
     private $seasons;
 
