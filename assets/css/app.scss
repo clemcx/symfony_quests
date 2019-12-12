@@ -9,8 +9,21 @@ $theme-colors: (
 
 body {
   background-color: #ca91b6;
+
+}
+.container{
+  width:90%;
+  margin:auto;
+
 }
 
 h1 {
   font-size: 50px;
+}
+.movie{
+  background: #b8cde1;
+  border: solid #5eb5e0;
+  width: 80%;
+  margin:auto auto 15px;
+
 }
