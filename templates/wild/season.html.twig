@@ -6,7 +6,7 @@
                 <h1>Saison{{ season.id }}</h1>
 
                 {% for episode in episodes %}
-                        <p><a href="{{ path('wild_episode', {'id':episode.id}) }}"> Episode n° {{ episode.number }}
+                        <p><a href="{{ path('wild_episode', {'id':episode.id}) }}"> program {{ season.program.id }} Episode n° {{ episode.number }}
                                         :{{ episode.title }}</a> : {{ episode.synopsis }}</p>
 
                 {% endfor %}

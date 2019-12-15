@@ -9,7 +9,7 @@
     <h1>Categories</h1>
 
            {% for category in categories  %}
-          <p>{{ category.id }} : {{ category.name }}</p>
+         <a href="{{ path('wild_category', {'categoryName': category.name}) }}"> <p>{{ category.id }} : {{ category.name }}</p></a>
         {% endfor %}
     <a href=" {{ path('category_add')}}"> ajouter une catégorie</a>
 
