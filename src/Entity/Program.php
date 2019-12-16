@@ -6,7 +6,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use App\Form\ProgramSearchType;
+use App\Form\ProgramType;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProgramRepository")
@@ -47,7 +47,8 @@ class Program
     private $seasons;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Actor", mappedBy="programs")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Actor", mappedBy="programs", fetch="EXTRA_LAZY")
+     * @ORM\JoinTable(name="actor_name")
      */
     private $actors;
 
