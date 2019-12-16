@@ -48,7 +48,7 @@ class WildController extends AbstractController
      * @param string $slug The slugger
      * @param ProgramRepository $programRepository
      * @return Response
-     * @Route("wild/program/{slug<^[a-z0-9-]+$>}", defaults={"slug" = null}, name="wild_program")
+     * @Route("wild/program/{slug<^[a-z0-9-.]+$>}", defaults={"slug" = null}, name="wild_program")
      */
     public function showProgram(?string $slug, ProgramRepository $programRepository): Response
     {

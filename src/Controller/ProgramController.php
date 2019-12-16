@@ -59,8 +59,10 @@ class ProgramController extends AbstractController
      */
     public function show(Program $program): Response
     {
+        $category =  $program->getCategory();
         return $this->render('program/show.html.twig', [
             'program' => $program,
+            'category'=> $category,
         ]);
     }
 

@@ -35,18 +35,13 @@ class Season
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Episode", mappedBy="season_id")
-     */
-    private $title;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Episode", mappedBy="season_id")
+     * @ORM\OneToMany(targetEntity="App\Entity\Episode", mappedBy="season")
      */
     private $episodes;
 
     public function __construct()
     {
-        $this->title = new ArrayCollection();
+
         $this->episodes = new ArrayCollection();
     }
 

@@ -3,25 +3,29 @@
 {% block title %}Program{% endblock %}
 
 {% block body %}
-    <h1>Program</h1>
+    <h1>{{ program.title }}</h1>
 
     <table class="table">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ program.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ program.title }}</td>
-            </tr>
             <tr>
                 <th>Summary</th>
                 <td>{{ program.summary }}</td>
             </tr>
             <tr>
-                <th>Poster</th>
-                <td>{{ program.poster }}</td>
+                <th>catégory</th>
+                <td>
+                    <a href="{{ path('wild_category', {'categoryName': category.name}) }}"> <p> {{ category.name }}</p></a>
+                </td>
+            </tr>
+            <tr>
+                <th>acteurs</th>
+                    <td>
+                         {% for actor in program.actors %}
+                             <a href="{{ path('actor_show' , {'id' : actor.id}) }}"><p>{{ actor.name }} </p></a>
+                         {% else %}
+                            <p>Aucun acteur pour cette série</p>
+                        {% endfor %}
+                    </td>
             </tr>
         </tbody>
     </table>

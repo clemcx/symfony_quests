@@ -5,9 +5,11 @@
 {% block body %}
     {% for program in programs %}
     <div>
-        <h2>{{ program.id }} {{ program.title }}</h2>
+        <a href="{{ path('program_show' , {'id':program.id}) }}"><h2>{{ program.title }}</h2></a>
         <p> {{ program.summary }}</p>
     </div>
+        {% else %}
+        <p style="font-size: 25px"> pas de séries dans cette catégorie</p>
     {% endfor %}
 {% endblock %}
 

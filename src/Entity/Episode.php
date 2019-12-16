@@ -37,15 +37,6 @@ class Episode
      */
     private $synopsis;
 
-    /**
-    *@ORM\OneToMany(targetEntity="App\Entity\Episode", mappedBy="category")
-    */
-    private $episodes;
-
-    public function __construct()
-    {
-        $this-> episodes = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
