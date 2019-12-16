@@ -15,8 +15,8 @@
 
                 <th>series</th>
                     {% for program in programs %}
-                <td>
-                    <a href="{{ path('program_show', {'id': program.id}) }}" ><p>{{ program.id }}</p></a>
+                <td style="width: 30%;">
+                    <a href="{{ path('program_show', {'id': program.id}) }}" ><p>{{ program.title }}</p></a>
                 </td>
                     {% endfor %}
 
